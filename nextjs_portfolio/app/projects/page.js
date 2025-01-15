@@ -1,21 +1,22 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './projects.module.css';
 
 const projects = [
     {
-        title: 'Project 1',
-        imageUrl: '/images/project1.png',
-        link: 'https://deployed-web-app1.com',
+        title: 'Event Task Scheduler',
+        imageUrl: '/images/eventscheduler.png',
+        link: 'https://jacobbaqleh1.github.io/event-task-scheduler/',
     },
     {
-        title: 'Project 2',
-        imageUrl: '/images/project2.png',
-        link: 'https://deployed-web-app2.com',
+        title: 'linkzen',
+        imageUrl: '/images/linkzen.png',
+        link: 'https://linkzen.onrender.com/',
     },
     {
-        title: 'Project 3',
-        imageUrl: '/images/project3.png',
-        link: 'https://deployed-web-app3.com',
+        title: 'Krazy Kanban Board',
+        imageUrl: '/images/krazy.png',
+        link: 'https://krazy-kanbanboard.onrender.com/',
     },
 ];
 
@@ -26,8 +27,8 @@ const Projects = () => {
             <div className={styles.grid}>
                 {projects.map((project, index) => (
                     <a key={index} href={project.link} target="_blank" rel="noopener noreferrer" className={styles.card}>
-                        <img src={project.imageUrl} alt={project.title} className={styles.image} />
-                        <h3>{project.title}</h3>
+                        <Image src={project.imageUrl} alt={project.title} className={styles.image} width={500} height={300} />
+                        <h3 className={styles.cardTitle}>{project.title}</h3>
                     </a>
                 ))}
             </div>
