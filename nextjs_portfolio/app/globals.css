@@ -19,3 +19,31 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin: 0 10px;
+}
+
+.navItem a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.navItem a:hover {
+  text-decoration: underline;
+}
